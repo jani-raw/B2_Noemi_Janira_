@@ -5,37 +5,48 @@ body {
     background-color: #ebe1e1;
   }
   
+  .webpage {
+    /*von Vorlage Roman Hatz*/
+    display: flex;
+    flex-direction: column;
+    /* min-height: bewirkt, dass der Footer zuunterst ist. */
+    min-height: 100vh;
+    /* padding, margin: 0: bewirkt, dass es mit 100vh zuunterist */
+    padding: 0;
+    margin: 0;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
+    padding: 1em;
     align-items: center;
-    padding: 10px;
-    background-color: rgb(65, 41, 41);
-    color: #fff;
+    background-color: rgb(255, 255, 255);
+    color: #680909;
   }
   
   nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
   }
   
   nav a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #fff;
+    color: #500a0a;
   }
   
+
   nav a:hover {
-    background-color: #fff;
-    color: #333;
+    color: #311010;
   }
   
   main {
     padding: 20px;
     margin-right: 10%;
     margin-left: 10%;
+    flex-grow: 1;
   }
   
   .shoe-list {
@@ -58,6 +69,10 @@ body {
     width: 95%;
   }
 
+  h1{
+    text-align: center;
+  }
+
   h2{
     text-align: center;
   }
@@ -78,22 +93,40 @@ body {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #460505;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 1px;
     cursor: pointer;
   }
   
   button:hover {
-    background-color: #fff;
-    color: #333;
+    background-color: #240303;
+    color: #d6cbcb;
   }
   
   footer {
-    padding: 20px;
-    text-align: center;
-    background-color: rgb(65, 41, 41);
-    color: #fff;
+
+      width: 100%;
+      background-color: rgb(212, 184, 177);
+      height: 5em;
   }
   
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+   
+  
+  label {
+    display: inline-block;
+    width: 100px;
+  }
+  
+   
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 200px;
+  }
