@@ -6,39 +6,45 @@
     <title>Nägelischueh.ch</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/promotion.css">
+
   </head>
   <body>
     <header>
       <h1>nägelischueh.ch</h1>
       <nav>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="sprint_hürden.html">Shop</a></li>
-          <li><a href="game.html">Game</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="promotion.html">Game</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Unsere Kategorien</h2>
-      <ul class="shoe-list">
-        <li>
-          <h3>Sprint & Hürden</h3>
-          <img src="images/Sprint & Hürden.jpg" alt="Sprint & Hürden">
-        </li>
-        <li>
-          <h3>Sprung</h3>
-          <img src="images/sprung.jpg" alt="Sprungschuhe">
-        </li>
-        <li>
-          <h3>Allround</h3>
-          <img src="images/allroun" alt="Allround">
-        </li>
-        <li>
-          <h3>Mittel & Langstrecken	</h3>
-          <img src="images/MittelLangstrecke.jpg" alt="Mittel & Langstrecken	">
-        </li>
 
-      </ul>
+
+      <div class="content">
+        <div id="formContainer">
+            <div>
+                Füllen Sie alle Felder aus.
+            </div>
+
+            <form>
+                <input type="text" id="email" placeholder="Email eingeben">
+                <input type="submit" id="submit" value="Absenden">
+            </form>
+        </div>
+
+        <div id="thankYouContainer" class="hidden">
+            Vielen Dank fürs Ausfüllen.
+        </div>
+
+    </div>
+    <div class="footer"></div>
+    <script src="./js/databaseClient.js"></script>
+    <script src="./js/from.js"></script>
+    <script src="./js/game.js"></script>
+
     </main>
     <footer>
       <p>&copy; 2023 Nägelischueh.ch Onlineshop</p>
