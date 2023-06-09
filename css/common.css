@@ -2,71 +2,178 @@
 
 body {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #ebe1e1;
+    background-color: #eee8e8;
+    height:100%;
+    width: 100%;
   }
-  
-  .webpage {
-    /*von Vorlage Roman Hatz*/
-    display: flex;
-    flex-direction: column;
-    /* min-height: bewirkt, dass der Footer zuunterst ist. */
-    min-height: 100vh;
-    /* padding, margin: 0: bewirkt, dass es mit 100vh zuunterist */
-    padding: 0;
-    margin: 0;
-  }
+
   .hidden {
     display: none;
 }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    color: #680909;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: #500a0a;
-  }
-  
 
-  nav a:hover {
-    color: #311010;
+
+/* CSS Code, den es für die Start Page braucht */
+
+header {
+  background-color:#ffffff;
+ padding: 20px 20px;
+ top: 0;
+ background-color: #ffffff;
+ width: 100% !important;
+position: fixed;
+}
+
+header .wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo img {
+  height: 50px;
+  display: block;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: 
+white;
+  padding: 20px;
+  transition: left 0.3s;
+}
+
+.navbar.show {
+  left: 0 !important;
+}
+
+.hide-scroll {
+  overflow:visible;
+}
+
+.navbar ul {
+  all: unset;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.navbar ul a {
+  all: unset;
+  color: 
+#444444;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 28px;
+}
+.navbar ul a:hover {
+  color: 
+#111111;
+  text-decoration: underline overline;
+  text-decoration-thickness: 3px;
+}
+
+.close-nav {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.close-nav button {
+  all: unset;
+  background: 
+#f7f7f7;
+  font-size: 42px;
+  cursor: pointer;
+  border: 1px solid 
+rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 3px;
+  color: 
+#444444;
+}
+.close-nav button:hover {
+  color: 
+#222222;
+  background: 
+white;
+}
+
+.menu-bar button {
+  border: 1px solid 
+rgba(0, 0, 0, 0.1);
+  background: 
+#f7f7f7;
+  height: 50px;
+  width: 50px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.menu-bar i {
+  display: block;
+  border-top: 3px solid 
+#444444;
+  border-bottom: 3px solid 
+#444444;
+}
+.menu-bar i::after {
+  display: block;
+  content: "";
+  border-top: 3px solid 
+#444444;
+  margin: 6px 0;
+}
+.menu-bar button:hover {
+  background: 
+white;
+}
+.menu-bar button:hover i {
+  border-color: 
+#222222;
+}
+
+
+
+@media (min-width: 550px) {
+  .navbar {
+      all: unset;
+      display: block;
   }
-  
-  main {
-    padding: 20px;
-    margin-right: 10%;
-    margin-left: 10%;
-    flex-grow: 1;
+  .navbar ul {
+      flex-direction: row;
+      gap: 50px;
   }
-  
-  .shoe-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .navbar ul a {
+      font-size: inherit;
   }
-  
-  .shoe-list li {
-    width: calc(25% - 20px);
-    margin: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    background-color: rgb(180, 146, 146);
+  .close-nav,
+  .menu-bar {
+      display: none;
   }
+}
+
+.container {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+
+
+.header_pic img {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+
+ 
   
   img {
     width: 95%;
@@ -74,6 +181,8 @@ body {
 
   h1{
     text-align: center;
+    font-size: 40px;
+    padding-bottom: 10px;
   }
 
   h2{
@@ -91,44 +200,22 @@ body {
     color: #333;
   }
 
+  
+  
+  
+  .footertext {
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    }
 
-  button {
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #460505;
-    color: #fff;
-    border: none;
-    border-radius: 1px;
-    cursor: pointer;
-  }
+     
+  footer   {
+      background-color: #ffffff;
+      height: 7em;
+      bottom: 0;
+      width: 100% !important;
+      position: relative;
+    }
   
-  button:hover {
-    background-color: #240303;
-    color: #d6cbcb;
-  }
-  
-  footer {
-
-      width: 100%;
-      background-color: rgb(212, 184, 177);
-      height: 5em;
-  }
-  
-
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
-   
-  
-  label {
-    display: inline-block;
-    width: 100px;
-  }
-  
-   
-  
-  input[type="text"],
-  input[type="email"] {
-    width: 200px;
-  }
