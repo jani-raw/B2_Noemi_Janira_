@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nägelischueh.ch</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/promotion.css">
+<head>   
+    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nägelischueh.ch</title>
+  <link rel="icon" type="image/svg" href="images/favicon.png">
+ <link rel="stylesheet" href="./css/common.css"> 
+ <link rel="stylesheet" href="./css/promotion.css">
 
-  </head>
-  <body>
-    <header>
-      <h1>nägelischueh.ch</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="promotion.html">Game</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
+</head>
 
 
-      <div class="content">
+
+
+<body>
+<header>
+  <div class="wrapper">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.svg" alt="Nägelischueh.ch"  /></a>
+      </div>
+      <div class="navbar">
+          <div class="close-nav"><button>×</button></div>
+          <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="promotion.html">Game</a></li>
+              </ul>
+          </nav>
+      </div>
+      <div class="menu-bar">
+          <button><i></i></button>
+      </div>
+  </div>
+</header>
+<div class="header_pic">
+    <img src="images/header_home.png" alt="Sprint & Hürden">
+  </div>
+<div class="container">
+
+
+        <h1>
+Unser Game - jetzt ausprobieren:
+
+        </h1>
+
+        <div class="content" id="gamepage">
+
         <div id="formContainer">
-            <div>
-                Füllen Sie alle Felder aus.
-            </div>
+
 
             <form class="myformtwo">
                 <input type="text" id="email" placeholder="Email eingeben">
                 <input type="submit" id="submit" value="Absenden">
             </form>
         </div>
-
-
+      </div>
 
         <div id="game-container" class="hidden">
 
@@ -68,19 +89,17 @@
           </div>
       </div>
     </div>
-    <div class="footer"></div>
-    <script src="./js/databaseClient.js"></script>
-    <script src="./js/from.js"></script>
-    <script src="./js/game.js"></script>
 
     </main>
-    <footer>
-      <p>&copy; 2023 Nägelischueh.ch Onlineshop</p>
-    </footer>
-    <script src="script.js"></script>
-    <script src="./js/databaseClient.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/game.js"></script>
   </body>
+</div>
+<footer class="footer">
+    <p class="footertext"> ©2023 Janira und Noemi  |  Impressum  |  Datenschutz  | Projekt der Schule BBZW in Sursee | Modul 291</p>
+
+  </footer>
+    <script src="./js/databaseClient.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/from.js"></script>
+
 </html>
 
