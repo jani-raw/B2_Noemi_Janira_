@@ -5,21 +5,26 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  .column {
+  .portrait {
     flex: 0 0 50%;
     text-align: center;
   }
   
-  .column img {
+  .portrait img {
     display: block;
     margin: 0 auto;
     max-width: 350px;
+  }
 
+  img#tick{
+    display: flex;
+    max-width: 100px;
+    margin: auto;  
   }
   
 
-  @media screen and (max-width: 650px) {
-    .column {
+  @media screen and (max-width: 750px) {
+    .portrait {
       width: 100%;
       display: block;
 flex-direction: column;    }
@@ -83,81 +88,91 @@ border: 0;
 
 .section4{
     background-color: #eee8e8;
-
-
 }
+
+
 
 
 
 .formularContainer_main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.formularContainer {
+  padding-bottom: 30px;
+  width: 50%;
   margin: auto;
-  max-width: 50%;
-  width: 100%;
+  }
+  
+ * {
+  box-sizing: border-box;
+
+ } 
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
 }
 
+.row:after {
+  clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+  .formularContainer_main {
+    padding-bottom: 30px;
+    width: 70%;
+    margin: auto;
+    }
+
+}
+
+  .formularContainer {
+    display: flex;
+    justify-content: center;
+  }
 
 .myform {
-  margin-bottom: 15px;
-  max-width: 80%;
-  justify-content: center;
+  max-width: 100%;
   padding-bottom: 20px;
 }
 
 
-
-.label_form {
-  font-size: 14px;
-  line-height: 24px;
-  color: #07074D;
-  position: relative;
-  padding-left: 5px;
-  cursor: pointer;
-}
 
 .input_form {
   width: 100%;
   padding: 13px 22px;
   border-radius: 10px;
   background: #FFFFFF;
-  font-weight: 500;
   font-size: 16px;
   color: #07074D;
   border: 0;
-
 }
+
 .input_form::placeholder {
   color: #a1a6b3;
 }
 
 .input_form {
-  color: #07074D;
   font-size: 14px;
   line-height: 24px;
-  display: block;
   margin-bottom: 10px;
 }
 
 .button_form {
-  text-align: center;
   width: 150px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 14px 25px;
   border: none;
-  font-weight: 500;
   background-color: #730d00;
   color: white;
   cursor: pointer;
   margin-top: 25px;
   margin:auto;
+  display: flex;
+  justify-content: center;
 }
 .button_form:hover {
   background-color: #420900;

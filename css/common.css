@@ -5,16 +5,11 @@ body {
     background-color: #eee8e8;
     height:100%;
     width: 100%;
-    margin: 0 !important;
   }
-
   .hidden {
     display: none;
 }
 
-
-
-/* CSS Code, den es für die Start Page braucht */
 
 header {
   background-color:#ffffff;
@@ -137,19 +132,9 @@ header .logo img {
   .menu-bar {
       display: none;
   }
-}
-
-
-
-.container {
-  max-width: 50%;
-  margin: 0 auto;
-}
-.container_fomular{
-  max-width: 50%;
-  margin: 0 auto;
 
 }
+
 
 header{
   overflow: hidden;
@@ -189,8 +174,10 @@ header{
   
   p {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
+    text-align: center;
+
   }
 
   
@@ -224,4 +211,17 @@ header{
 }
 
 
-    
+
+/* CSS Code, den es für die Start Page braucht */
+
+
+
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+}
+.container_fomular{
+  max-width: 50%;
+  margin: 0 auto;
+
+}
