@@ -48,6 +48,7 @@
 
       <div class="container">
         <h1>ENTDECKE JETZT UNSER NEUES GAME!</h1>   
+        <h2>und gewinne einen 50 CHF Gutschein</h2>
         <div class="button-container">
           <button onclick="window.location.href = 'promotion.html';">Los geht's</button>
         </div>
@@ -67,13 +68,13 @@
 
 <div class="images_home">
     
-              <div class="column">
+              <div class="portrait">
                   <img src="images/portrait_noemi.png" alt="Noemi">
                     <h4>Noemi</h4>
             
                   </div>
                 
-              <div class="column">
+              <div class="portrait">
                   <img src="images/portrait_janira.png" alt="Janira">
                     <h4>Janira</h4>          
                   </div>
@@ -106,18 +107,26 @@
 
     <div class="formularContainer_main">
 
-      <div class="formularContainer">
+      <div class="formularContainer" id="formularContainer">
 
-    <form class="myform">
+    <form class="myform" class="row">
+      <div class="column">
       <label for="vorname" class="label_form">Vorname</label>
-      <input type="text" id="vorname" name="vorname" placeholder="Vorname eingeben" class="input_form" required>
+      <input type="text" id="vorname" name="vorname" placeholder="Vorname eingeben" class="input_form" class="name_input" required>
+      </div>
+      <div class="column">
       <label for="nachname" class="label_form" >Nachname</label>
-      <input type="text" id="nachname" name="nachname" placeholder="Name eingeben" class="input_form" required><br>
+      <input type="text" id="nachname" name="nachname" placeholder="Name eingeben" class="input_form" class="name_input" required><br>
+    </div>
+    <div class="column">
       <label for="email" class="label_form">E-Mail</label>
-        <input type="email" id="email" name="email" placeholder="Email eingeben" class="input_form" required>
+        <input type="email" id="email" name="email" placeholder="Email eingeben" class="input_form" class="email_tel_input" required>
+      </div>
+      <div class="column">
         <label for="phone" class="label_form" >Telefonnummer</label>
-        <input type="tel" id="phone" name="phone" placeholder=" Telefonnummer eingeben bsp. +41 79 123 456"  class="input_form" required><br>
-<!--
+        <input type="tel" id="phone" name="phone" placeholder="Telefonnummer eingeben"  class="input_form" class="email_tel_input" required><br>
+      </div>
+        <!-- Radio
         <div class="radio-main">
           <label for="info" class="input_form"> Ich möchte Infos erhalten zu: </label>
 
@@ -159,16 +168,21 @@
             </div>
 
          -->
-
           <input type="submit" id="submit" class="button_form" value="Senden">
      
         </form>
 
-<p id="Thankyou" class="hidden">
-  Vielen Dank fürs ausfüllen
-</p>      
+   
 
 </div>
+<div id="Thankyou" class="hidden">
+
+  <h3 >
+    Vielen Dank für's Ausfüllen
+  </h3>   
+  <img id="tick" src="images/tick.png" alt="Formular erfolgreich ausgefüllt">
+</div>
+
 </div>
 </div>
 </div>
