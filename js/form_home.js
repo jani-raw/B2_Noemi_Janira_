@@ -1,6 +1,7 @@
 
-// CHAT GPT korrrigiert?'
-const myform = document.getElementById("formularContainer");
+
+// (1) Variablen initialisieren
+const formContainer = document.getElementById("formularContainer");
 const gameContainer = document.getElementById("Thankyou");
 const submitButton = document.getElementById("submit");
 submitButton.disabled = true;
@@ -8,88 +9,57 @@ const vornameField = document.getElementById("vorname");
 const nachnameField = document.getElementById("nachname");
 const emailField = document.getElementById("email");
 const phoneField = document.getElementById("phone");
-const infoField = document.querySelectorAll(".info-checkbox"); // Mehrere Elemente mit gemeinsamer Klasse
 
 // (2) Interaktionen festlegen
 vornameField.addEventListener("keyup", () => {
-  validateForm();
+  validateform();
 });
-
 nachnameField.addEventListener("keyup", () => {
-  validateForm();
+  validateform();
 });
-
 emailField.addEventListener("keyup", () => {
-  validateForm();
+  validateform();
 });
-
 phoneField.addEventListener("keyup", () => {
-  validateForm();
+  validateform();
 });
-
-infoField.forEach((field) => {
-  field.addEventListener("change", () => {
-    validateForm();
-  });
-});
-
 submitButton.addEventListener("click", async (event) => {
   event.preventDefault();
   onClickSubmit();
 });
 
 // (3) Interaktionen Code
-const validateForm = () => {
-  if (
-    vornameField.value === "" ||
-    nachnameField.value === "" ||
-    emailField.value === "" ||
-    phoneField.value === "" ||
-    !isAnyInfoFieldChecked()
-  ) {
+const validateform = () => {
+  if (emailField.value === "") {
     submitButton.disabled = true;
   } else {
     submitButton.disabled = false;
   }
 };
-
-const isAnyInfoFieldChecked = () => {
-  for (let i = 0; i < infoField.length; i++) {
-    if (infoField[i].checked) {
-      return true;
-    }
-  }
-  return false;
-};
-
-async function onClickSubmit() {
+const onClickSubmit = async () => {
   // Daten aus dem Formular für die Datenbank bereitstellen
   const data = {
-    group: "b2",
-    pw: "aa61f63b",
-    tableName: "user",
+    group: "b2", // SQL Gruppen Namen
+    pw: "aa61f63b", // SQL Passwort
+    tableName: "user", // Name der Tabelle in der SQL Datenbank
 
     columns: {
+      // "email" Name der Spalte in der SQL Tabelle
+      // "emailField.value" Eingabe des Benutzers aus dem Formularfeld
       vorname: vornameField.value,
       nachname: nachnameField.value,
       email: emailField.value,
-      phone: phoneField.value,
-      info: getInfoFieldValues(),
+      phone: phoneField.value
+
     },
   };
   // Speichert die Daten in der Datenbank
   await databaseClient.insertInto(data);
-}
 
-const getInfoFieldValues = () => {
-  const infoValues = [];
-  infoField.forEach((field) => {
-    if (field.checked) {
-      infoValues.push(field.value);
-    }
-  });
-  return infoValues;
-}
+  // Nach dem Speichern verschwindet das Formular, das Game erscheint
+  formContainer.classList.add("hidden");
+  gameContainer.classList.remove("hidden");
+};
 
 
 
@@ -107,7 +77,6 @@ const vornameField = document.getElementById("vorname");
 const nachnameField = document.getElementById("nachname");
 const emailField = document.getElementById("email");
 const phoneField = document.getElementById("phone");
-const infoField = document.getElementById("rabatte","updates", "angebote", "alle" );
 
 
 
@@ -128,10 +97,6 @@ phoneField.addEventListener("keyup", () => {
   validateForm();
 });
 
-infoField.addEventListener("keyup", () => {
-  validateForm();
-});
-
 
 submitButton.addEventListener("click", async (event) => {
   event.preventDefault();
@@ -142,8 +107,8 @@ submitButton.addEventListener("click", async (event) => {
 
 // (3) Interaktionen Code
 const validateForm = () => {
- // if (vornameField.value === "" && nachnameField.value === "")
-  if (vornameField === "" && nachnameField === "" && emailField === "" && phoneField === "" && infoField === "" )  {
+ // if (vornameField.value === "" || nachnameField.value === "")
+  if (vornameField === "" || nachnameField === "" || emailField === "" || phoneField === "" )  {
     submitButton.disabled = true;
   } else { 
     submitButton.disabled = false; 
@@ -166,54 +131,10 @@ async function onClickSubmit() {
       nachname: nachnameField.value,
       email: emailField.value,
       phone: phoneField.value,
-      info: infoField.value,
     },
   };
   // Speichert die Daten in der Datenbank
   await databaseClient.insertInto(data);
-
   ;
 }
-
-
-
-
-
-
-
-// (2) Interaktionen festlegen
-emailField.addEventListener("keyup", () => {
-  onChangeEmailField();
-});
-submitButton.addEventListener("click", async (event) => {
-  event.preventDefault();
-  onClickSubmit();
-});
-
-// (3) Interaktionen Code
-const onChangeEmailField = () => {
-  if (emailField.value === "") {
-    submitButton.disabled = true;
-  } else {
-    submitButton.disabled = false;
-  }
-};
-const onClickSubmit = async () => {
-  // Daten aus dem Formular für die Datenbank bereitstellen
-  const data = {
-    group: "b2", // SQL Gruppen Namen
-    pw: "aa61f63b", // SQL Passwort
-    tableName: "user", // Name der Tabelle in der SQL Datenbank
-
-    columns: {
-      // "email" Name der Spalte in der SQL Tabelle
-      // "emailField.value" Eingabe des Benutzers aus dem Formularfeld
-      email: emailField.value,
-    },
-  };
-  // Speichert die Daten in der Datenbank
-  await databaseClient.insertInto(data);
-
-}
-
 */
