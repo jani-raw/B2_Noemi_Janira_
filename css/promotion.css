@@ -1,5 +1,6 @@
 /* CSS Code, den es für die Promotion Page braucht */
 
+
 /* Hilfsklasse */
 .hidden {
     display: none;
@@ -84,7 +85,7 @@ margin-bottom: 4%;
 }
 
 .dino-dies {
-    background-color: red;
+    background-color: #730d00;
 }
 
 #game-rock {
