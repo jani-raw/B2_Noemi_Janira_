@@ -1,23 +1,23 @@
-/* CSS Code, der für alle Web Pages gleich ist */
-
+/* Globale Stile */
 body {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #eee8e8;
-    height:100%;
-    width: 100%;
-  }
-  .hidden {
-    display: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #eee8e8;
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
+.hidden {
+  display: none;
+}
 
+/* Header */
 header {
-  background-color:#ffffff;
- padding: 20px 20px;
- top: 0;
- background-color: #ffffff;
- width: 100% !important;
-position: fixed;
+  background-color: #ffffff;
+  padding: 20px 20px;
+  top: 0;
+  width: 100% !important;
+  position: fixed;
 }
 
 header .wrapper {
@@ -28,11 +28,13 @@ header .wrapper {
   align-items: center;
   justify-content: space-between;
 }
+
 header .logo img {
   height: 50px;
   display: block;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -50,7 +52,7 @@ header .logo img {
 }
 
 .hide-scroll {
-  overflow:visible;
+  overflow: visible;
 }
 
 .navbar ul {
@@ -61,6 +63,7 @@ header .logo img {
   align-items: center;
   gap: 25px;
 }
+
 .navbar ul a {
   all: unset;
   color: #444444;
@@ -69,6 +72,7 @@ header .logo img {
   font-weight: bold;
   font-size: 28px;
 }
+
 .navbar ul a:hover {
   color: #111111;
   text-decoration: underline overline;
@@ -78,6 +82,7 @@ header .logo img {
   text-align: right;
   margin-bottom: 20px;
 }
+
 .close-nav button {
   all: unset;
   font-size: 42px;
@@ -88,59 +93,49 @@ header .logo img {
   color: #444444;
 }
 
-
 .menu-bar button {
   border: 0;
   height: 50px;
-  width: 50px;
+  width: 40px;
   padding: 20px 0px;
-  margin-right: 2px;
+  margin-right: 8px;
   cursor: pointer;
   border-radius: 3px;
   background-color: white;
 }
+
 .menu-bar i {
   display: block;
-  border-top: 3px solid 
-#444444;
-  border-bottom: 3px solid 
-#444444;
+  border-top: 3px solid #444444;
+  border-bottom: 3px solid #444444;
 }
+
 .menu-bar i::after {
   display: block;
   content: "";
-  border-top: 3px solid 
-#444444;
+  border-top: 3px solid #444444;
   margin: 6px 0;
 }
 
-
-
 @media (min-width: 700px) {
   .navbar {
-      all: unset;
-      display: block;
+    all: unset;
+    display: block;
   }
   .navbar ul {
-      flex-direction: row;
-      gap: 50px;
+    flex-direction: row;
+    gap: 50px;
   }
   .navbar ul a {
-      font-size: inherit;
+    font-size: inherit;
   }
   .close-nav,
   .menu-bar {
-      display: none;
+    display: none;
   }
-
 }
 
-
-header{
-  overflow: hidden;
-
-}
-
+/* Inhalt */
 .header_pic img {
   width: 100%;
   max-width: 100%;
@@ -148,80 +143,97 @@ header{
   margin-top: 80px;
 }
 
-
-  
-  img {
-    width: 95%;
-  }
-
-  h1{
-    text-align: center;
-    font-size: 40px;
-    padding-bottom: 10px;
-  }
-
-  h2{
-    text-align: center;
-    font-size: 30px;
-  }
-  
-  h3 {
-    margin-top: 20px;
-    font-size: 18px;
-    text-align: center;
-
-  }
-  
-  p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-
-  }
-
-  
-    
-  footer   {
-      background-color: #ffffff;
-      bottom: 0;
-      height: 80px;
-    }
-
-    .footertext {
-      font-size: 15px;
-      padding-top: 50px;
-      padding-bottom: 30px;
-      padding-left: 20px;
-      }
-
-    .footer {
-      padding: 1rem;
-      background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-   
-.footer li{
-  list-style: none;
-  display: inline;
-  float:left;
-  padding-right: 35px;
+img {
+  width: 100%;
 }
 
+h1 {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
 
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
 
-/* CSS Code, den es für die Start Page braucht */
+h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
 
-
+p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
 
 .container {
   max-width: 50%;
   margin: 0 auto;
 }
-.container_fomular{
-  max-width: 50%;
-  margin: 0 auto;
 
+.container_fomular {
+  max-width: 50%;
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .container_fomular {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .logo img {
+    height: 33px;
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #ffffff;
+  justify-content: space-between;
+}
+
+.footertext {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin: 0 10px;
+}
+
+.footer img {
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer li {
+    margin: 5px;
+  }
 }

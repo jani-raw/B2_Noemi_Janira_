@@ -27,9 +27,9 @@
     .portrait {
       width: 100%;
       display: block;
-flex-direction: column;    }
-.images_home {
-  flex-direction: column;
+      flex-direction: column;    }
+    .images_home {
+       flex-direction: column;
 }
   }
 
