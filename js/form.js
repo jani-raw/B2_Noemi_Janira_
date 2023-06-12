@@ -1,5 +1,3 @@
-
-
 // (1) Variablen initialisieren
 const formContainer = document.getElementById("formContainer");
 const gameContainer = document.getElementById("game-container");
@@ -24,7 +22,15 @@ const onChangeEmailField = () => {
     submitButton.disabled = false;
   }
 };
+
 const onClickSubmit = async () => {
+  // E-Mail-Adresse überprüfen
+  const email = emailField.value;
+  if (!validateEmail(email)) {
+    alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+    return;
+  }
+
   // Daten aus dem Formular für die Datenbank bereitstellen
   const data = {
     group: "b2", // SQL Gruppen Namen
@@ -45,15 +51,9 @@ const onClickSubmit = async () => {
   gameContainer.classList.remove("hidden");
 };
 
-
-//Validierung vom Formular
-function validateemail()  
-{  
-var x=document.myformtwo.email.value;  //nicht wiederholung
-var atposition=x.indexOf("@");  
-var dotposition=x.lastIndexOf(".");  
-if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
-  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
-  return false;  
-  }  
-}  
+// Funktion zur Überprüfung der E-Mail-Syntax
+function validateEmail(email) {
+  // Einfacher Regulärer Ausdruck zur Überprüfung der E-Mail-Syntax
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}

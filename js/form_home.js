@@ -1,5 +1,3 @@
-
-
 // (1) Variablen initialisieren
 const formContainer = document.getElementById("formularContainer");
 const gameContainer = document.getElementById("Thankyou");
@@ -29,7 +27,45 @@ submitButton.addEventListener("click", async (event) => {
   onClickSubmit();
 });
 
+// Restlicher Code bleibt unverändert
+
 // (3) Interaktionen Code
+
+// Funktion zur Überprüfung des Namens (nur Buchstaben und bis zu 255 Zeichen)
+function validateName(name) {
+  var nameRegex = /^[A-Za-z]{1,255}$/;
+  return nameRegex.test(name);
+}
+
+// Funktion zur Überprüfung der E-Mail-Syntax
+function validateEmail(email) {
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Funktion zur Überprüfung der Telefonnummer im schweizerischen Format
+function validatePhone(phone) {
+  var phoneRegex = /^\+41[1-9]\d{1,13}$/;
+  return phoneRegex.test(phone);
+}
+
+// Funktion zum Anzeigen einer Fehlermeldung
+function showError(input, message) {
+  var errorDiv = document.createElement('div');
+  errorDiv.className = 'error-message';
+  errorDiv.textContent = message;
+
+  var parent = input.parentElement;
+  parent.appendChild(errorDiv);
+
+  input.classList.add('input-error');
+  
+  // Fehlermeldung nach einigen Sekunden entfernen
+  setTimeout(function() {
+    errorDiv.remove();
+    input.classList.remove('input-error');
+  }, 3000);
+}
 
 function validateform() {
   const vornameValue = vornameField.value;
@@ -43,7 +79,42 @@ function validateform() {
     submitButton.disabled = true;
   }
 }
+
 async function onClickSubmit() {
+  // Validierung der Eingabefelder
+  var vornameInput = document.getElementById('vorname');
+  var nachnameInput = document.getElementById('nachname');
+  var emailInput = document.getElementById('email');
+  var phoneInput = document.getElementById('phone');
+
+  // Vorname Validierung
+  var vorname = vornameInput.value.trim();
+  if (!validateName(vorname)) {
+    showError(vornameInput, 'Vorname ist ungültig');
+    return;
+  }
+
+  // Nachname Validierung
+  var nachname = nachnameInput.value.trim();
+  if (!validateName(nachname)) {
+    showError(nachnameInput, 'Nachname ist ungültig');
+    return;
+  }
+
+  // Email Validierung
+  var email = emailInput.value.trim();
+  if (!validateEmail(email)) {
+    showError(emailInput, 'Ungültige E-Mail-Adresse');
+    return;
+  }
+
+  // Telefonnummer Validierung
+  var phone = phoneInput.value.trim();
+  if (!validatePhone(phone)) {
+    showError(phoneInput, 'Telefonnummerformat: +4112345678');
+    return;
+  }
+
   // Daten aus dem Formular für die Datenbank bereitstellen
   const data = {
     group: "b2",
@@ -51,12 +122,10 @@ async function onClickSubmit() {
     tableName: "newsletter",
 
     columns: {
-      // "email" Name der Spalte in der SQL Tabelle
-      //emailField.value" Eingabe des Benutzers aus dem Formularfeld
-      vorname: vornameField.value,
-      nachname: nachnameField.value,
-      email: emailField.value,
-      phone: phoneField.value
+      vorname: vorname,
+      nachname: nachname,
+      email: email,
+      phone: phone
     },
   };
   // Speichert die Daten in der Datenbank
@@ -66,6 +135,4 @@ async function onClickSubmit() {
   formContainer.classList.add("hidden");
   gameContainer.classList.remove("hidden");
 }
-
-
 
