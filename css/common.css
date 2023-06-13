@@ -136,12 +136,37 @@ header .logo img {
 }
 
 /* Inhalt */
-.header_pic img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  margin-top: 80px;
+
+/* For screen widths equal to or greater than 800px */
+@media screen and (min-width: 800px) {
+  .header_pic {
+    display: block; /* Display the image */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 80px;
+  }
+  
+  .header_pic_mobile {
+    display: none; /* Hide the image */
+  }
 }
+
+/* For screen widths below 800px */
+@media screen and (max-width: 799px) {
+  .header_pic {
+    display: none; /* Hide the image */
+  }
+  
+  .header_pic_mobile {
+    display: block; /* Display the image */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 80px;
+  }
+}
+
 
 img {
   width: 100%;
@@ -206,6 +231,7 @@ p {
   justify-content: space-between;
 }
 
+
 .footertext {
   margin-bottom: 10px;
   text-align: center;
@@ -236,4 +262,10 @@ p {
   .footer li {
     margin: 5px;
   }
+}
+
+
+.content {
+  min-height: calc(100% - 60px); /* Subtract footer height from 100% to keep the content height */
+  /* Other styles for the content */
 }
