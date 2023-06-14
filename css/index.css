@@ -31,7 +31,7 @@
     .images_home {
        flex-direction: column;
 }
-  }
+}
 
 
   .button-container button {
@@ -177,4 +177,3 @@ border: 0;
 .button_form:hover {
   background-color: #420900;
 }
-
