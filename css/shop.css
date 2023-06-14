@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 #Kategorien {
   padding-bottom: 50px;
 }
