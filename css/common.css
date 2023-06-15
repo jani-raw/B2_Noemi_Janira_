@@ -10,11 +10,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
-html{
-  height: 100%;
-}
-
 .hidden {
   display: none;
 }
@@ -122,7 +117,7 @@ header .logo img {
   margin-right: 8px;
   cursor: pointer;
   border-radius: 3px;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 /* Stil für das Menü-Symbol */
@@ -229,10 +224,6 @@ p {
   margin: 0 auto;
 }
 
-/* Stil für den Container des Formulars */
-.container_fomular {
-  max-width: 50%;
-}
 
 /* Container unter 750px */
 @media screen and (max-width: 750px) {

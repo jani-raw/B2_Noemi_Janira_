@@ -9,6 +9,17 @@
 /* Portraitbild */
 .portrait {
   flex: 0 0 50%;
+  text-align: center;/* Bilder auf Home */
+.images_home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Portraitbild */
+.portrait {
+  flex: 0 0 50%;
   text-align: center;
 }
 
@@ -142,17 +153,20 @@ iframe {
   font-size: 16px;
   color: #07074D;
   border: 0;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 10px;
 }
 
 .input_form::placeholder {
   color: #a1a6b3;
 }
 
-.input_form {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 10px;
+
+.input_form::placeholder {
+  color: #a1a6b3;
 }
+
 
 /* Stil für den Formular-Button */
 .button_form {
@@ -162,7 +176,173 @@ iframe {
   padding: 14px 25px;
   border: none;
   background-color: #730d00;
-  color: white;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 25px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.button_form:hover {
+  background-color: #420900;
+}
+}
+
+.portrait img {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+/*tick bild - Formular geschickt */
+img#tick {
+  display: flex;
+  max-width: 100px;
+  margin: auto;
+}
+
+/* Portraits unter 750px */
+@media screen and (max-width: 750px) {
+  .portrait {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+  }
+  .images_home {
+    flex-direction: column;
+  }
+}
+
+/* Button */
+.button-container button {
+  padding: 10px 50px;
+  background-color: #730d00;
+  color: #eee8e8;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.button-container button:hover {
+  background-color: #420900;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 5%;
+}
+
+iframe {
+  border: 0;
+}
+
+.container iframe {
+  width: 100%;
+  height: 500px;
+  padding-bottom: 10%;
+}
+
+.section1 {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
+
+.section2 {
+  background-color: #eee8e8;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+
+.section3 {
+  background-color: #ffffff;
+  padding-top: 3%;
+}
+
+.section4 {
+  background-color: #eee8e8;
+}
+
+/* Hauptcontainer Formular */
+.formularContainer_main {
+  padding-bottom: 30px;
+  width: 50%;
+  margin: auto;
+}
+
+/* Spalten */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+
+
+/* Medienabfrage für Bildschirmbreiten unter 1000px */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+  .formularContainer_main {
+    padding-bottom: 30px;
+    width: 70%;
+    margin: auto;
+  }
+}
+
+/* Stil für den Formularcontainer */
+.formularContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Stil für das Formular */
+.myform {
+  max-width: 100%;
+  padding-bottom: 20px;
+}
+
+/* Stil für die Eingabefelder im Formular */
+.input_form {
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  font-size: 16px;
+  color: #07074D;
+  border: 0;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+.input_form::placeholder {
+  color: #a1a6b3;
+}
+
+
+.input_form::placeholder {
+  color: #a1a6b3;
+}
+
+
+/* Stil für den Formular-Button */
+.button_form {
+  width: 150px;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 14px 25px;
+  border: none;
+  background-color: #730d00;
+  color: #ffffff;
   cursor: pointer;
   margin-top: 25px;
   margin: auto;

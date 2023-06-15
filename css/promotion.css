@@ -3,6 +3,7 @@
   min-height: calc(100% - 390px); 
 }
 
+
 /* Stil für die Eingabefelder im Formular */
 .input_form {
   width: 100%;
@@ -22,7 +23,7 @@
   padding: 14px 25px;
   border: none;
   background-color: #730d00;
-  color: white;
+  color: #FFFFFF;
   cursor: pointer;
   margin-top: 25px;
   margin:auto;
@@ -202,7 +203,7 @@
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
-  color: white;
+  color: #FFFFFF;
 }
 
 /* Stil für den Punktestand des Spiels */
