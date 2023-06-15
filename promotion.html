@@ -1,145 +1,113 @@
 <!DOCTYPE html>
-<head>   
-    
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nägelischueh.ch</title>
-  <link rel="icon" type="image/svg" href="images/favicon.png">
- <link rel="stylesheet" href="./css/common.css"> 
- <link rel="stylesheet" href="./css/promotion.css">
-
+<html lang="de">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nägelischueh.ch</title>
+   <link rel="icon" type="image/svg" href="images/favicon.png">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/promotion.css">
 </head>
-
-
-
-
 <body>
-<header>
-  <div class="wrapper">
-      <div class="logo">
-        <a href="index.html"><img src="images/logo.png" alt="Nägelischueh.ch"  /></a>
+   <header>
+      <div class="wrapper">
+         <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Nägelischueh.ch"  /></a>
+         </div>
+         <div class="navbar">
+            <div class="close-nav"><button>×</button></div>
+            <nav>
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="promotion.html">Game</a></li>
+               </ul>
+            </nav>
+         </div>
+         <div class="menu-bar">
+            <button><i></i></button>
+         </div>
       </div>
-      <div class="navbar">
-          <div class="close-nav"><button>×</button></div>
-          <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="promotion.html">Game</a></li>
-              </ul>
-          </nav>
-      </div>
-      <div class="menu-bar">
-          <button><i></i></button>
-      </div>
-  </div>
-</header>
-<div class="header_pic">
-    <img src="images/header_promotion.png" alt="Sprint & Hürden">
-  </div>
-
-  <div class="header_pic_mobile">
-    <img src="images/header_promotion_mobile.png" alt="Sprint & Hürden">
-  </div>
-<div class="container">
-
-
-        <h1>
-Unser Game
-
-        </h1>
-        <h2> 
-          jetzt ausprobieren und einen 50CHF Gutschein gewinnen.
-        </h2>
-
-        <div class="content" id="gamepage">
-
-        <div id="formContainer">
-
-
+   </header>
+   <div class="header_pic">
+      <img src="images/header_promotion.png" alt="Sprint & Hürden">
+   </div>
+   <div class="header_pic_mobile">
+      <img src="images/header_promotion_mobile.png" alt="Sprint & Hürden">
+   </div>
+   <div class="container">
+      <h1>
+         Unser Game
+      </h1>
+      <h2> 
+         jetzt ausprobieren und einen 50CHF Gutschein gewinnen.
+      </h2>
+      <div class="content" id="gamepage">
+         <div id="formContainer">
             <form class="myformtwo">
-                <input type="text" id="email" placeholder="Email eingeben" class="input_form">
-                <input type="submit" id="submit" value="Absenden" class="button_form">
+               <input type="text" id="email" placeholder="Email eingeben" class="input_form">
+               <input type="submit" id="submit" value="Absenden" class="button_form">
             </form>
-        </div>
-
+         </div>
       </div>
       <div>
-    
       </div>
-
-
-
-        <div id="game-container" class="hidden">
-          <div class="mobile_game">
+      <div id="game-container" class="hidden">
+         <div class="mobile_game">
             <h3>
-              Zum Spielen unseres Games, die Seite auf einem PC oder Laptop öffnen.
+               Zum Spielen unseres Games, die Seite auf einem PC oder Laptop öffnen.
             </h3>
-           </div>
-
-          <div class="desktop_game">
-             <div class="game-info">
-               <p> Klicke, um zu springen.<br />
-              Weiche den Steinen aus.<br />
-              Erreiche 100 Punkte, um einen Preis zu gewinnen.</p>
+         </div>
+         <div class="desktop_game">
+            <div class="game-info">
+               <p>Klicke, um zu springen.</p>
+               <p> Weiche den Steinen aus.</p>
+               <p>Erreiche 100 Punkte, um einen Preis zu gewinnen.</p>
             </div>
-        
-
-             <div id="game">
-                <div id="game-start">
-                   <div class="startScreenText"> <p>
-                      Klicke, um das Spiel zu starten. </p>
-                    </div>
-                </div>
-                <div id="game-background"></div>
-                <div id="game-dino"></div>
-                <div id="game-rock"></div>
-                <div id="game-score">0</div>
-             </div>
-
+            <div id="game">
+               <div id="game-start">
+                  <div class="startScreenText">
+                     <p>
+                        Klicke, um das Spiel zu starten. 
+                     </p>
+                  </div>
+               </div>
+               <div id="game-background"></div>
+               <div id="game-dino"></div>
+               <div id="game-rock"></div>
+               <div id="game-score">0</div>
+            </div>
             <div id="game-end" class="hidden">
-              <div id="game-winner" class="hidden"> <p>
-                  ⭐ ⭐ ⭐ Glückwunsch ⭐ ⭐ ⭐ <br />
-                  Du hast mehr als 100 Punkte erzielt.
-                  Wir benachrichtigen dich über deinen Gewinn via Email.</p>
-              </div>
-              <p>
-              Das Spiel ist zu Ende.<br />
-              Klicke auf das Spiel, um erneut zu spielen.
-            </p>
-          </div>
-        </div>
+               <div id="game-winner" class="hidden">
+                  <p>⭐ ⭐ ⭐ Glückwunsch ⭐ ⭐ ⭐</p>
+                  <p>Du hast mehr als 100 Punkte erzielt.</p>
+                  <p>Wir benachrichtigen dich über deinen Gewinn via Email.</p>
+               </div>
+               <p>Das Spiel ist zu Ende.</p>
+               <p>Klicke auf das Spiel, um erneut zu spielen.</p>
+            </div>
+         </div>
       </div>
-</div>
-
-    </main>
-  </body>
-</div>
+   </div>
+</body>
 <footer class="footer">
-  <p class="footertext"> ©2023 Janira und Noemi  |  Impressum  |  Datenschutz  | BBZW Sursee | M291</p>
-
-<div>
-<ul>
-<li class="footer">
-<a href="index.html"><img src="images/socials/facebook.png" alt="facebook"/></a>
-</li>
-<li class="footer">
-<a href="index.html"><img src="images/socials/instagram-logo.png" alt="instagram"/></a>
-</li>
-<li class="footer">
-<a href="index.html"><img src="images/socials/linkedin.png" alt="linkedin"/></a>
-</li>
-</ul>
-
-</div>
-
+   <p class="footertext"> ©2023 Janira und Noemi  |  Impressum  |  Datenschutz  | BBZW Sursee | M291</p>
+   <div>
+      <ul>
+         <li class="footer">
+            <a href="index.html"><img src="images/socials/facebook.png" alt="facebook"/></a>
+         </li>
+         <li class="footer">
+            <a href="index.html"><img src="images/socials/instagram-logo.png" alt="instagram"/></a>
+         </li>
+         <li class="footer">
+            <a href="index.html"><img src="images/socials/linkedin.png" alt="linkedin"/></a>
+         </li>
+      </ul>
+   </div>
 </footer>
-    <script src="./js/databaseClient.js"></script>
-    <script src="./js/game.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="./js/nav.js"></script>
-
-
+<script src="./js/databaseClient.js"></script>
+<script src="./js/game.js"></script>
+<script src="./js/form.js"></script>
+<script src="./js/nav.js"></script>
 </html>
-
