@@ -3,7 +3,9 @@
   min-height: calc(100% - 390px); 
 }
 
-
+html{
+  height: 100%;
+}
 /* Stil für die Eingabefelder im Formular */
 .input_form {
   width: 100%;
