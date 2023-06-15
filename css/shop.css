@@ -1,17 +1,14 @@
+/* Stil für die Kategorien */
 #Kategorien {
   padding-bottom: 50px;
 }
 
+/* Abstandsstil für Schuhe */
 .schuhe_abstand {
   padding-bottom: 40px;
 }
 
-* {
-  box-sizing: border-box;
-
- } 
-
-
+/* Stil für die Schuhliste */
 .shoe-list {
   display: flex;
   flex-wrap: wrap;
@@ -20,18 +17,18 @@
   padding: 0;
 }
 
+/* Stil für jedes Element in der Schuhliste */
 .shoe-list li {
-  width: calc(50% - 20px); 
+  width: calc(50% - 20px);
   margin: 10px;
   text-align: center;
   background-color: #fff;
 }
 
-
+/* Medienabfrage für Bildschirme mit einer Breite von mindestens 1080px */
 @media screen and (min-width: 1080px) {
+  /* Anpassung des Stils für jedes Element in der Schuhliste */
   .shoe-list li {
     width: calc(25% - 20px);
   }
 }
-
-

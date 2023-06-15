@@ -1,4 +1,5 @@
 /* Globale Stile */
+
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: #eee8e8;
@@ -6,22 +7,30 @@ body {
   width: 100%;
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+}
+
 html{
   height: 100%;
 }
+
 .hidden {
   display: none;
 }
 
 /* Header */
+
+/* Stil für den Header-Bereich */
 header {
   background-color: #ffffff;
   padding: 20px 20px;
   top: 0;
-  width: 100% !important;
+  width: 100%;
   position: fixed;
 }
 
+/* Header-Bereichs */
 header .wrapper {
   max-width: 1500px;
   margin: 0 auto;
@@ -31,12 +40,15 @@ header .wrapper {
   justify-content: space-between;
 }
 
+/* Logo Header */
 header .logo img {
   height: 50px;
   display: block;
 }
 
 /* Navbar */
+
+/* Navigationsleiste */
 .navbar {
   position: fixed;
   top: 0;
@@ -46,17 +58,19 @@ header .logo img {
   height: 100%;
   background-color: #ffffff;
   padding: 20px;
-  transition: left 0.3s;
 }
 
+/* Zeigt Navigationsleiste */
 .navbar.show {
-  left: 0 !important;
+  left: 0;
 }
 
+/* Erlaubt das Scrollen innerhalb der Navigationsleiste */
 .hide-scroll {
   overflow: visible;
 }
 
+/* Stil für die Liste innerhalb der Navigationsleiste */
 .navbar ul {
   all: unset;
   list-style-type: none;
@@ -66,6 +80,7 @@ header .logo img {
   gap: 25px;
 }
 
+/* Stil für die Links innerhalb der Navigationsleiste */
 .navbar ul a {
   all: unset;
   color: #444444;
@@ -75,16 +90,19 @@ header .logo img {
   font-size: 28px;
 }
 
+/* Stil für den Link-Hover-Effekt innerhalb der Navigationsleiste */
 .navbar ul a:hover {
   color: #111111;
   text-decoration: underline overline;
 }
 
+/* Stil für die Schließen-Schaltfläche in der Navigationsleiste */
 .close-nav {
   text-align: right;
   margin-bottom: 20px;
 }
 
+/* Stil für die Schließen-Schaltfläche */
 .close-nav button {
   all: unset;
   font-size: 42px;
@@ -95,6 +113,7 @@ header .logo img {
   color: #444444;
 }
 
+/* Stil für die Menü-Schaltfläche */
 .menu-bar button {
   border: 0;
   height: 50px;
@@ -106,12 +125,14 @@ header .logo img {
   background-color: white;
 }
 
+/* Stil für das Menü-Symbol */
 .menu-bar i {
   display: block;
   border-top: 3px solid #444444;
   border-bottom: 3px solid #444444;
 }
 
+/* Stil für das Pseudoelement nach dem Menü-Symbol */
 .menu-bar i::after {
   display: block;
   content: "";
@@ -119,6 +140,7 @@ header .logo img {
   margin: 6px 0;
 }
 
+/* Medienabfrage für Bildschirmbreiten ab 700px */
 @media (min-width: 700px) {
   .navbar {
     all: unset;
@@ -139,74 +161,80 @@ header .logo img {
 
 /* Inhalt */
 
-/* For screen widths equal to or greater than 800px */
+/* Medienabfrage für Bildschirmbreiten ab 800px */
 @media screen and (min-width: 800px) {
   .header_pic {
-    display: block; /* Display the image */
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    display: block; /* Bild anzeigen */
     margin-top: 80px;
   }
   
   .header_pic_mobile {
-    display: none; /* Hide the image */
+    display: none; /* Bild verstecken */
   }
 }
 
-/* For screen widths below 800px */
+/* Medienabfrage für Bildschirmbreiten unter 800px */
 @media screen and (max-width: 799px) {
   .header_pic {
-    display: none; /* Hide the image */
+    display: none; /* Bild verstecken */
   }
   
   .header_pic_mobile {
-    display: block; /* Display the image */
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    display: block; /* Bild anzeigen */
     margin-top: 80px;
   }
 }
 
-
+/* Stil für Bilder */
 img {
   width: 100%;
 }
 
+/* Stil für Überschriften h1 */
 h1 {
   text-align: center;
   font-size: 40px;
   padding-bottom: 10px;
+  color: #333333;
+
 }
 
+/* Stil für Überschriften h2 */
 h2 {
   text-align: center;
   font-size: 30px;
+  color: #333333;
+
 }
 
+/* Stil für Überschriften h3 */
 h3 {
   margin-top: 20px;
   font-size: 18px;
   text-align: center;
+  color: #333333;
 }
 
+/* Stil für Absätze */
 p {
   margin-top: 10px;
   font-size: 18px;
-  color: #333;
+  color: #333333;
   text-align: center;
 }
 
+/* Stil für den Hauptcontainer */
 .container {
   max-width: 50%;
   margin: 0 auto;
 }
 
+/* Stil für den Container des Formulars */
 .container_fomular {
   max-width: 50%;
 }
 
+/* Container unter 750px */
 @media screen and (max-width: 750px) {
   .container {
     max-width: 80%;
@@ -218,6 +246,7 @@ p {
   }
 }
 
+/* Logo unter 500px */
 @media screen and (max-width: 500px) {
   header .logo img {
     height: 33px;
@@ -225,6 +254,8 @@ p {
 }
 
 /* Footer */
+
+/* Stil für den Footer */
 .footer {
   display: flex;
   align-items: center;
@@ -233,42 +264,44 @@ p {
   justify-content: space-between;
 }
 
-
+/* Stil für den Text im Footer */
 .footertext {
   margin-bottom: 10px;
   text-align: center;
 }
 
+/* Stil für die Liste im Footer */
 .footer ul {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
+display: flex;
+list-style: none;
+justify-content: center;
+margin: 0;
+padding: 0;
+}
+
+/* Stil für die Listenelemente im Footer */
+.footer li {
+margin: 0 10px;
+}
+
+/* Stil für die Bilder im Footer */
+.footer img {
+width: 30px;
+height: 30px;
+}
+
+/* Medienabfrage für Bildschirmbreiten unter 900px */
+@media screen and (max-width: 900px) {
+.footer {
+flex-direction: column;
 }
 
 .footer li {
-  margin: 0 10px;
+margin: 5px;
 }
-
-.footer img {
-  width: 30px;
-  height: 30px;
-}
-
-@media screen and (max-width: 900px) {
-  .footer {
-    flex-direction: column;
-  }
-
-  .footer li {
-    margin: 5px;
-  }
 }
 
 
-.content {
-  min-height: calc(100% - 60px); /* Subtract footer height from 100% to keep the content height */
-  /* Other styles for the content */
-}
+
+
 
