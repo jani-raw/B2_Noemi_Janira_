@@ -60,11 +60,6 @@ function showError(input, message) {
 
   input.classList.add('input-error');
   
-  // Fehlermeldung nach einigen Sekunden entfernen
-  setTimeout(function() {
-    errorDiv.remove();
-    input.classList.remove('input-error');
-  }, 3000);
 }
 
 function validateform() {
@@ -104,7 +99,7 @@ async function onClickSubmit() {
   // Email Validierung
   var email = emailInput.value.trim();
   if (!validateEmail(email)) {
-    showError(emailInput, 'Ungültige E-Mail-Adresse');
+    showError(emailInput, 'Emailformat: name@xy.ch');
     return;
   }
 
@@ -135,4 +130,3 @@ async function onClickSubmit() {
   formContainer.classList.add("hidden");
   gameContainer.classList.remove("hidden");
 }
-
